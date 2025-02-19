@@ -19,6 +19,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* css for blog's header */
 .container .blog-header h1 {
     display: none;
 }
@@ -42,6 +43,7 @@ header.blog-header p {
     font-weight: bold;
 }
 
+/* css for blog's content */
 .blog-content {
     margin: 20px;
 }
@@ -76,6 +78,8 @@ header.blog-header p {
 
 
 /* common CSS */
+
+/* Collapsible for each Day's blog */
 .collapsible {
     position: relative;
     cursor: pointer;
@@ -95,7 +99,6 @@ header.blog-header p {
     bottom: calc(1em * 1.25 - 0.25em);
     position: absolute;
     right: 1.5em;
-    /* transition: 0.2s ease-in-out; */
     transition: inherit;
 }
 
