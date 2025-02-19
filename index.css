@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ccc;
+    min-width: 1500px;
+}
+
+.container {
+    width: 1200px;
+    margin: 10px auto;
+    padding: 20px 10px;
+    background: #fff;
+    line-height: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container .blog-header h1 {
+    display: none;
+}
+
+header.blog-header {
+    height: 100px;
+    background: lightblue;
+    border-radius: 10px;
+    background: #008c8c;
+    color: #fff;
+    /* do not set width, otherwise not working */
+    margin: 0 -50px;
+    /* scale made the font distorted */
+    /* transform: scale(1.2, 1); */
+}
+
+header.blog-header p {
+    line-height: 100px;
+    font-size: 32px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.blog-content {
+    margin: 20px;
+}
+
+.blog-content h2 {
+    color: #003366;
+}
+
+.blog-content h3 {
+    color: #0056b3;
+}
+
+.blog-content h4 {
+    color: #3385ff;
+}
+
+/* the article elements */
+.blog-article {
+    border-radius: 10px;
+}
+
+.blog-article p.weekNo {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.blog-article h3~h4,
+.blog-article h3~p {
+    padding-left: 2em;
+}
+
+
+
+/* common CSS */
+.collapsible {
+    position: relative;
+    cursor: pointer;
+    padding: 1em;
+    background-color: #99cfcf;
+    border-radius: inherit;
+    transition: 0.2s ease-in-out;
+}
+.collapsible::after {
+    content: '';
+    width: 1em;
+    height: 1em;
+    border: 1px solid black;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-45deg);
+    bottom: calc(1em * 1.25 - 0.25em);
+    position: absolute;
+    right: 1.5em;
+    /* transition: 0.2s ease-in-out; */
+    transition: inherit;
+}
+
+.opened.collapsible {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.closed.collapsible::after {
+    transform: rotate(135deg);
+    bottom: calc(1em * 1.25 + 0.75em);
+}
+
+.under-collapsible {
+    padding: 1em;
+    background-color: #cce5e5;
+    transition: 0.2s ease-in-out;
+    transform-origin: center top;
+    overflow: hidden;
+}
+
+.collapsible + .under-collapsible {
+    transform: scaleY(1);
+}
+
+.collapsible.closed + .under-collapsible {
+    transform: scaleY(0);
+}
+
+
